@@ -130,4 +130,5 @@ header {
 .bi-cart {
   font-size: 16px;
   color: rgba(0, 0, 0, 0.8);
+  border: 1px solid red;
 }
