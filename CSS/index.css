@@ -201,23 +201,23 @@ footer{
   gap: 30px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-.shopmart{
+.shopsmart{
   width: 30%;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-.footer-up-righ{
+.footer-up-right{
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.shopmart>h3{
+.shopsmart>h3{
   color: blue;
   font-size: 16px;
   font-weight: 400;
 }
-.shopmart>p{
+.shopsmart>p{
   font-size: 14px;
   color: rgba(255, 255, 255, 0.6);
 }
@@ -300,4 +300,60 @@ footer{
   text-align: center;
   color: rgba(255, 255, 255, 0.6);
   font-size: 15px;
+}
+
+/* footer media query */
+
+@media (max-width: 480px){
+  .shopsmart{
+    width: 100%;
+  }
+  .footer-up{
+    flex-direction: column;
+  }
+  .footer-up-right{
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px){
+  footer{
+    width: 100%;
+  }
+  .shopsmart{
+    grid-area: shopsmart;
+    height: fit-content;
+    width: 100%;
+    border: 1px solid red;
+  }
+  .quick-links{
+    grid-area: quick_links;
+  }
+  .customer-supports{
+    grid-area: customer_supports;
+  }
+  .newsletter{
+    grid-area: newsletter;
+  }
+  .footer-up{
+    width: 100% !important;
+    display: grid !important;
+    flex-wrap: wrap;
+    border: 1px solid red;
+    grid-template-areas: "shopsmart footer-up-right"
+                          ;
+  }
+  .footer-up-right{
+    display: grid !important;
+    flex-wrap: wrap;
+    border: 1px solid red;
+    grid-template-areas: "quick_links quick_links"
+                          "customer_supports customer_supports"
+                          "newsletter newsletter";
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  
 }
