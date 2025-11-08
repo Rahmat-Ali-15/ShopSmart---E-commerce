@@ -346,13 +346,13 @@ footer{
                           ;
   }
   .footer-up-right{
-    display: grid !important;
+    /* display: grid !important;
     flex-wrap: wrap;
     border: 1px solid red;
     grid-template-areas: "quick_links quick_links"
                           "customer_supports customer_supports"
                           "newsletter newsletter";
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); */
   }
 
   
